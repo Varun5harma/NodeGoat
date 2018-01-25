@@ -8,7 +8,6 @@ function AllocationsDAO(db) {
     /* If this constructor is called without the "new" operator, "this" points
      * to the global object. Log a warning and call it correctly. */
     if (false === (this instanceof AllocationsDAO)) {
-        console.log("Warning: AllocationsDAO constructor called without 'new' operator");
         return new AllocationsDAO(db);
     }
 
@@ -34,6 +33,8 @@ function AllocationsDAO(db) {
         }, function(err, result) {
 
             if (!err) {
+
+
 
                 console.log("Updated allocations");
 
